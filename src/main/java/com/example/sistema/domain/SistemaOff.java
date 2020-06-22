@@ -11,24 +11,24 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "sistemaoff")
-public class SistemasOff implements Serializable{
+public class SistemaOff implements Serializable{
     private static final long serialVersionUID = 1L;
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    
+
     private String nome;
     private Date dataInicio;
     private Date dataFim;
     private String descricao;
     private Integer codigoAd;
 
-    public SistemasOff() {
+    public SistemaOff() {
 
     }
 
-    public SistemasOff(Integer id, String nome, Date dataInicio, Date dataFim, String descricao, Integer codigoAd) {
+    public SistemaOff(Integer id, String nome, Date dataInicio, Date dataFim, String descricao, Integer codigoAd) {
         this.id = id;
         this.nome = nome;
         this.dataInicio = dataInicio;
@@ -105,7 +105,7 @@ public class SistemasOff implements Serializable{
             return false;
         if (getClass() != obj.getClass())
             return false;
-        SistemasOff other = (SistemasOff) obj;
+        SistemaOff other = (SistemaOff) obj;
         if (id == null) {
             if (other.id != null)
                 return false;
