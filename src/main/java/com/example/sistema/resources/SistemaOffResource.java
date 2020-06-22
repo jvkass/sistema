@@ -19,7 +19,7 @@ SistemaOffRepository sistemaOffRepository;
 
 @GetMapping("/sistemaoff")
 public List<SistemaOff> listaSistemas(){
-    return SistemaOffRepository.findAll();
+    return sistemaOffRepository.findAll();
 }
 
     
