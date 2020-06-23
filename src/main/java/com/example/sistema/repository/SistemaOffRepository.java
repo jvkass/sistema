@@ -6,7 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface SistemaOffRepository extends JpaRepository<SistemaOff, Integer> {
 
-    SistemaOff getById(Integer id);
-    SistemaOff findByIdSistemaOff(Integer id);
+   
     
 }
