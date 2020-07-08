@@ -6,6 +6,8 @@ import com.example.sistema.domain.SistemaOff;
 import com.example.sistema.repository.SistemaOffRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,9 +24,10 @@ public class SistemaOffResource {
     @Autowired
     SistemaOffRepository sistemaOffRepository;
 
+    @CrossOrigin("*")
     @GetMapping("/sistemaoff")
-    public List<SistemaOff> listaSistemas() {
-        return sistemaOffRepository.findAll();
+    public ResponseEntity<List<SistemaOff>> listaSistemas() {
+        return ResponseEntity.ok().body(sistemaOffRepository.findAll());
     }
 
     @GetMapping("/sistemaoff/{id}")
